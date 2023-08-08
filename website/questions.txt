@@ -1,0 +1,9 @@
+Q1: Write a function which generates an integer from a given range without using the random library
+Q2: You are given an m x n integer matrix with the following two properties: Each row is sorted in non-decreasing order. The first integer of each row is greater than the last integer of the previous row. Given an integer target, return true if the target is in matrix or false otherwise. You must write a solution in O(log(m * n)) time complexity.
+Q3: A message containing letters from A-Z can be encoded into numbers using the following mapping: 'A' -> "1" 'B' -> "2" ... 'Z' -> "26" To decode an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above (there may be multiple ways). For example, "11106" can be mapped into: "AAJF" with the grouping (1 1 10 6) "KJF" with the grouping (11 10 6) Note that the grouping (1 11 06) is invalid because "06" cannot be mapped into 'F' since "6" is different from "06". Given a string s containing only digits, return the number of ways to decode it.
+Q4: Implement a function to find the second-largest element in an array of integers. Time complexity (O(n log n))
+Q5: Given an array of integers, find the two elements that sum up to a given target value. Time complexity (O(n log n))
+Q6: Print Dudeney Numbers between 1 and n
+NOTE: Dudeney Numbers are numbers whose sum of digits is equal to their cube root. cbrt(512) = 8 and 5+1+2=8
+Q7: Given an array of 9 elements as input [values: 0, 1, 2 (0:" ", 1:"X", 2:"O")], convert the integers to their corresponding strings and print them in the form of a 3x3 grid
+Q8: Given a word as input, determine if it is hard to pronounce, a word is considered hard to pronounce if it has 4 or more consonants in a row.
