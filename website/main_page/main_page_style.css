@@ -50,3 +50,10 @@ h3 {
     margin-left: 25px;
     display: none;
 }
+#timer {
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin-right: 40px;
+    font-size: x-large;
+}
