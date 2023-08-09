@@ -14,5 +14,8 @@ function timer(duration,elementId) {
         }
     }, 1000);
 }
+document.addEventListener("DOMContentLoaded", () => {
+    document.documentElement.requestFullscreen();
+})
 const timeDiv = "timer";
 timer(90,timeDiv);
