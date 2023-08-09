@@ -32,19 +32,20 @@ body {
     margin: 0;
     overflow: hidden;
     position: relative;
-    background-color: #f0f0f0;
+    background-color: #212020 /*#f0f0f0*/;
 }
 
 /* Headings */
 h1 {
     text-align: center;
-    color: #4d84b8;
+    color: #f0f0f0;
 }
 #questions {
-    border: 2px solid #4d84b8;
+    border: 2px solid #9e55f8 /*#4d84b8*/;
     padding: 20px;
     margin: 0 120px;
     margin-bottom: 40px;
+    color: #f0f0f0;
 }
 h3 {
     margin-left: 25px;
@@ -56,4 +57,5 @@ h3 {
     position: absolute;
     margin-right: 40px;
     font-size: x-large;
+    color: #f0f0f0;
 }
