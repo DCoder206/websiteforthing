@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+  <style>
+    body {
+      background-color: #282c34;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: monospace;
+    }
+
+    .content {
+      max-width: 800px;
+      color: #abb2bf;
+      font-family: monospace;
+      font-size: 20px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .countdown {
+      position: fixed;
+      color: #abb2bf;
+      left: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="countdown" id="countdown"></div>
+  <div class="content">
+    <h1>Round 2</h1>
+    Q1. Take a string as input, print and count the number of unique strings and that can be made from the input string
+    without repeating any characters
+    <br><br>
+    Q2. Find the longest prefix from a given set of strings
+    <br><br>
+    Q3. Implement the dictionary data structure without using the dictionary data type in python
+    <br><br>
+    Q4. Implement a singly linked list in python
+    <br><br>
+    Q5. Given 1 <= n <=6, calculate (a+b)ⁿ using Pascal’s triangles </div>
+
+      <script>
+        // Set the initial time in seconds
+        let timeInSeconds = 45 * 60;
+
+        // Update the countdown timer
+        function updateCountdown() {
+          const countdownElement = document.getElementById('countdown');
+
+          const minutes = Math.floor(timeInSeconds / 60);
+          const seconds = timeInSeconds % 60;
+
+          const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+          countdownElement.textContent = formattedTime;
+
+          // Decrement time by 1 second
+          timeInSeconds--;
+
+          if (timeInSeconds < 0) {
+            clearInterval(countdownInterval);
+            countdownElement.textContent = "Time's up!";
+            window.location.href = "TimeUp.html";
+          }
+        }
+
+        // Call updateCountdown every second (1000 milliseconds)
+        const countdownInterval = setInterval(updateCountdown, 1000);
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time's Up</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #282c34;
+      overflow: hidden;
+    }
+
+    #background-svg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.5;
+    }
+
+    #content {
+      text-align: center;
+      font-family: monospace;
+      font-size: 3em;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    button {
+      background-color: #20252c;
+      color: #abb2bf;
+      /* Button font color */
+      padding: 10px 18px;
+      /* Smaller padding for the button */
+      margin: 5px 5px 14px 5px;
+      /* Equal top and left indent, and reduced right and bottom indent */
+      font-size: 16px;
+      border: none;
+      box-shadow: none;
+      cursor: pointer;
+      position: fixed;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <svg id="background-svg" viewBox="0 0 100 100">
+    <image width="100" height="100" href="assets/encode-logo.svg" />
+  </svg>
+  <div id="content">
+    Time's Up
+  </div>
+  <form action="r2.html">
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+
+</html>

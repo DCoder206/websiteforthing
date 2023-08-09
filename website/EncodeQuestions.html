@@ -4,35 +4,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Questions File</title>
+  <title>Countdown Timer</title>
   <style>
     body {
+      background-color: #282c34;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
       margin: 0;
-      padding: 0;
-      background-color: #20252c;
-      font-family: Arial, sans-serif;
-      color: #abb2bf;
-      /* Text color */
+      font-family: monospace;
     }
 
     .content {
-      max-width: 600px;
+      max-width: 800px;
+      color: #abb2bf;
+      font-family: monospace;
+      font-size: 20px;
       margin: 0 auto;
       padding: 20px;
     }
 
-    .question-text {
-      font-size: 20px;
-      margin-bottom: 10px;
+    .countdown {
+      position: fixed;
+      color: #abb2bf;
+      left: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
     }
   </style>
 </head>
 
 <body>
+  <div class="countdown" id="countdown"></div>
   <div class="content">
-    <h1>Questions Page</h1>
-    <div class="question-text">Questions</div>
+    <center>
+      <h1>Round 1</h1>
+    </center>
+    Q1. Write a function which generates an integer from a given range without using the random library
+    <br><br>
+    Q2. You are given an m x n integer matrix with the following two properties: Each row is sorted in non-decreasing
+    order. The first integer of each row is greater than the last integer of the previous row. Given an integer target,
+    return true if the target is in matrix or false otherwise. You must write a solution in O(log(m * n)) time
+    complexity.
+    <br><br>
+    Q3. A message containing letters from A-Z can be encoded into numbers using the following mapping: 'A' -> "1" 'B' ->
+    "2" ... 'Z' -> "26" To decode an encoded message, all the digits must be grouped then mapped back into letters using
+    the reverse of the mapping above (there may be multiple ways). For example, "11106" can be mapped into: "AAJF" with
+    the grouping (1 1 10 6) "KJF" with the grouping (11 10 6) Note that the grouping (1 11 06) is invalid because "06"
+    cannot be mapped into 'F' since "6" is different from "06". Given a string s containing only digits, return the
+    number of ways to decode it.
+    <br><br>
+    Q4. Implement a function to find the second-largest element in an array of integers. Time complexity (O(log n))
+    <br><br>
+    Q5. Given an array of integers, find the two elements that sum up to a given target value. Time complexity (O(log
+    n))
+    <br><br>
+    Q6. Print Dudeney Numbers between 1 and 6000
+    NOTE: Dudeney Numbers are numbers whose sum of digits is equal to their cube root. root(512) = 8 and 5+1+2=8
+    A: 512, 4913, 5832
+    <br><br>
+    Q7. Given an array of 9 elements as input [values: 0, 1, 2 (0:" ", 1:"X", 2:"O")], convert the integers to their
+    corresponding strings and print them in the form of a 3x3 grid
+    <br><br>
+    Q8. Given a word as input, determine if it is hard to pronounce, a word is considered hard to pronounce if it has 4
+    or
+    more consonants in a row.
+    <br><br>
+    Q9. Raju is a software developer, so he has to switch between different languages sometimes. Each programming
+    language
+    has some features, which are represented by integers here. Currently, Raju has to use a language with two given
+    features A and B. He has two options --- switching to a language with two features A1 and B1, or to a language with
+    two features A2 and B2. All four features of these two languages are pairwise distinct. Tell Raju whether he can use
+    the first language, the second language or neither of these languages (if no single language has all the required
+    features).
+    Input:
+    1. First and only line contains a list of 6 integers. First 2 elements give the required features, the next two give
+    the features of the first language, and the next two give the features of the second language.
+    Output:
+    print 0 if cannot switch
+    print 1 if switch to first language
+    print 2 if switch to second language
+    <br><br>
+    Q10. Chandan wants to write a function that raises some number to some power, but he does not know about the pow()
+    function and the ** operator. Help Chandan achieve his goal.
+
   </div>
+
+  <script>
+    // Set the initial time in seconds
+    let timeInSeconds = 0.1 * 60;
+
+    // Update the countdown timer
+    function updateCountdown() {
+      const countdownElement = document.getElementById('countdown');
+
+      const minutes = Math.floor(timeInSeconds / 60);
+      const seconds = timeInSeconds % 60;
+
+      const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      countdownElement.textContent = formattedTime;
+
+      // Decrement time by 1 second
+      timeInSeconds--;
+
+      if (timeInSeconds < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.textContent = "Time's up!";
+        window.location.href = "TimeUp.html";
+      }
+    }
+
+    // Call updateCountdown every second (1000 milliseconds)
+    const countdownInterval = setInterval(updateCountdown, 1000);
+  </script>
 </body>
 
 </html>
