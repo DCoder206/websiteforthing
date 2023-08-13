@@ -18,4 +18,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.requestFullscreen();
 })
 const timeDiv = "timer";
-timer(90,timeDiv);
+timer(45,timeDiv);
