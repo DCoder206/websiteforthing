@@ -6,7 +6,7 @@
         <link rel="icon" href="../site-assets/Group 10-encode.svg">
         <script>
             history.pushState(null, null, location.href);
-            window.onpopstate = function(event) {
+            window.onpopstate = (event) => {
                 history.go(1);
             };
         </script>
