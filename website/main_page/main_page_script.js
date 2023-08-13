@@ -11,11 +11,17 @@ function timer(duration,elementId) {
         else {
             timerele.innerHTML = "Time's up";
             clearInterval(interval);
+            setTimeout(() => {
+                redirect("../time_up.html");
+            }, 2000);
         }
     }, 1000);
 }
 document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.requestFullscreen();
 })
+function redirect(loc) {
+    window.location.href = loc;
+}
 const timeDiv = "timer";
 timer(45,timeDiv);
