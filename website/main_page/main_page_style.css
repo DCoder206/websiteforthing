@@ -7,7 +7,7 @@ html {
 
 /* Background Image */
 .image {
-    background-image: url("site-assets/encode-logo.svg");
+    background-image: url("../site-assets/encode-logo.svg");
     background-size: 15%;
     background-position: center center;
     background-position-y: -10px;
